@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>A133</title>
+    <link rel="shortcut icon" type="image/ico" th:href="@{/img/favicon.ico}"/>
+</head>
+<body>
+<h1 th:inline="text">Bienvenido [[${#httpServletRequest.remoteUser}]]!</h1>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Cerrar Sesion"/>
+</form>
+<h1><a th:href="@{/userman}"> Ingresar a la gestion de usuarios</a> | <a th:href="@{/system}"> Ingresar al Sistema</a></h1>
+</body>
+</html>
